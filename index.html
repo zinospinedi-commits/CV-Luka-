@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luka Raidot – CV</title>
+  <meta
+    name="description"
+    content="CV de Luka Raidot – étudiant au Lycée français Académie Mouratoglou, profil sport-études, mathématiques, SES et immersion en entreprise."
+  />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --panel:#f8fafc;
+      --text:#0f172a;
+      --muted:#64748b;
+      --line:#e2e8f0;
+      --accent:#1d4ed8;
+      --accent-2:#0ea5e9;
+      --shadow:0 8px 30px rgba(2, 6, 23, 0.06);
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box;}
+    html,body{height:100%;}
+
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{color:inherit;text-decoration:none;}
+
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:40px 20px 72px;
+    }
+
+    .top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      margin-bottom:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .dot{
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      box-shadow:0 0 0 4px rgba(29,78,216,0.10);
+    }
+
+    .lang{
+      font-size:0.9rem;
+      color:var(--muted);
+      display:flex;
+      align-items:center;
+      gap:8px;
+      user-select:none;
+    }
+
+    .btn{
+      border:1px solid var(--line);
+      background:#fff;
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:0.9rem;
+      cursor:pointer;
+      transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      border-color:rgba(29,78,216,0.35);
+      box-shadow:0 10px 20px rgba(2,6,23,0.06);
+    }
+
+    .hero{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(29,78,216,0.05), rgba(14,165,233,0.02));
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      right:-120px;
+      top:-120px;
+      width:260px;
+      height:260px;
+      border-radius:999px;
+      background:radial-gradient(circle at 30% 30%, rgba(29,78,216,0.20), transparent 60%);
+      pointer-events:none;
+    }
+
+    .hero-inner{
+      display:grid;
+      grid-template-columns:120px 1fr;
+      gap:20px;
+      align-items:center;
+      position:relative;
+      z-index:1;
+    }
+
+    @media (max-width:700px){
+      .hero-inner{
+        grid-template-columns:1fr;
+      }
+    }
+
+    .avatar{
+      width:120px;
+      height:120px;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.7);
+      box-shadow:0 10px 24px rgba(2,6,23,0.10);
+      background:#eef4ff;
+    }
+
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    h1{
+      margin:0;
+      font-size:2.2rem;
+      letter-spacing:-0.6px;
+      line-height:1.1;
+    }
+
+    .sub{
+      margin-top:10px;
+      color:var(--muted);
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+      align-items:center;
+      font-size:0.98rem;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:#ffffff;
+      border:1px solid rgba(29,78,216,0.20);
+      color:rgba(15,23,42,0.92);
+    }
+
+    .pill i{
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:var(--accent);
+      display:inline-block;
+      box-shadow:0 0 0 4px rgba(29,78,216,0.08);
+    }
+
+    .grid{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    @media (max-width:860px){
+      .grid{grid-template-columns:1fr;}
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+    }
+
+    .left.card{
+      background:linear-gradient(180deg, var(--panel), #fff);
+    }
+
+    @media (min-width:861px){
+      .left.card{position:sticky;top:18px;}
+    }
+
+    .kicker{
+      font-size:0.78rem;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      color:rgba(29,78,216,0.85);
+      margin:0 0 10px;
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin:0 0 12px;
+    }
+
+    .section-title h2{
+      margin:0;
+      font-size:1.05rem;
+      letter-spacing:-0.2px;
+    }
+
+    .line{
+      height:1px;
+      background:linear-gradient(90deg, rgba(29,78,216,0.55), rgba(14,165,233,0.10), transparent);
+      flex:1;
+    }
+
+    .muted{color:var(--muted);}
+
+    .facts{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .fact{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      padding:10px;
+      border-radius:14px;
+      border:1px solid rgba(226,232,240,0.9);
+      background:rgba(255,255,255,0.6);
+      transition:transform .15s ease, border-color .15s ease;
+    }
+
+    .fact:hover{
+      transform:translateY(-1px);
+      border-color:rgba(29,78,216,0.28);
+    }
+
+    .fact .icon{
+      width:30px;
+      height:30px;
+      border-radius:10px;
+      background:rgba(29,78,216,0.10);
+      display:grid;
+      place-items:center;
+      color:rgba(29,78,216,0.95);
+      font-weight:700;
+      font-size:0.9rem;
+      flex:0 0 auto;
+    }
+
+    .fact .label{
+      font-size:0.85rem;
+      color:var(--muted);
+      margin-bottom:2px;
+    }
+
+    .fact .value{
+      font-size:0.95rem;
+      color:rgba(15,23,42,0.95);
+      word-break:break-word;
+    }
+
+    .pills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:8px;
+    }
+
+    .tag{
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(29,78,216,0.18);
+      background:rgba(29,78,216,0.06);
+      font-size:0.88rem;
+      transition:transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+
+    .tag:hover{
+      transform:translateY(-1px);
+      border-color:rgba(29,78,216,0.35);
+      background:rgba(29,78,216,0.09);
+    }
+
+    .block{margin-bottom:16px;}
+    .para{margin:0;color:rgba(15,23,42,0.92);}
+
+    .job{
+      padding:16px;
+      border-radius:16px;
+      border:1px solid rgba(226,232,240,0.95);
+      background:#fff;
+      transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+      margin-top:12px;
+    }
+
+    .job:hover{
+      transform:translateY(-1px);
+      border-color:rgba(29,78,216,0.25);
+      box-shadow:0 14px 28px rgba(2,6,23,0.06);
+    }
+
+    .job-head{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:baseline;
+    }
+
+    .job-title{
+      font-weight:650;
+      font-size:1.02rem;
+      letter-spacing:-0.2px;
+    }
+
+    .job-meta{
+      color:var(--muted);
+      font-size:0.92rem;
+    }
+
+    ul{margin:10px 0 0;padding-left:18px;}
+    li{margin:6px 0;}
+
+    .reveal{
+      opacity:0;
+      transform:translateY(10px);
+      transition:opacity .45s ease, transform .45s ease;
+    }
+
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .stagger li{
+      opacity:0;
+      transform:translateY(6px);
+    }
+
+    .stagger.visible li{animation:rise .36s ease forwards;}
+    .stagger.visible li:nth-child(1){animation-delay:.04s}
+    .stagger.visible li:nth-child(2){animation-delay:.08s}
+    .stagger.visible li:nth-child(3){animation-delay:.12s}
+    .stagger.visible li:nth-child(4){animation-delay:.16s}
+    .stagger.visible li:nth-child(5){animation-delay:.20s}
+
+    @keyframes rise{
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none !important;transition:none !important;scroll-behavior:auto !important;}
+      .reveal{opacity:1;transform:none;}
+      .stagger li{opacity:1;transform:none;}
+    }
+
+    @media print{
+      .btn{display:none;}
+      .wrap{padding:0;}
+      .hero,.card{box-shadow:none;}
+      body{background:#fff;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="top">
+      <div class="brand">
+        <div class="dot" aria-hidden="true"></div>
+        <div class="muted" data-fr="CV Étudiant" data-en="Student CV"></div>
+      </div>
+
+      <div class="lang">
+        <span data-fr="Langue" data-en="Language"></span>
+        <button class="btn" id="langBtn" type="button" aria-label="Toggle language">FR</button>
+      </div>
+    </div>
+
+    <header class="hero reveal">
+      <div class="hero-inner">
+        <div class="avatar">
+          <img src="profile.jpg" alt="Photo de Luka Raidot" />
+        </div>
+
+        <div>
+          <h1>Luka Raidot</h1>
+          <div class="sub">
+            <span class="pill">
+              <i></i>
+              <span data-fr="Étudiant – Profil sport & académique" data-en="Student – Sports & academic profile"></span>
+            </span>
+            <span class="muted">393 rue Evariste Galois, 06410 Biot</span>
+            <span class="muted">06 80 78 05 50 · luka.raidot@icloud.com</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+
+      <aside class="left card reveal">
+        <p class="kicker" data-fr="Aperçu" data-en="Highlights"></p>
+
+        <div class="section-title">
+          <h2 data-fr="Points clés" data-en="Core Focus"></h2>
+          <div class="line" aria-hidden="true"></div>
+        </div>
+
+        <div class="pills">
+          <span class="tag" data-fr="Sport-études" data-en="Sports studies"></span>
+          <span class="tag" data-fr="Tennis" data-en="Tennis"></span>
+          <span class="tag" data-fr="Mathématiques" data-en="Mathematics"></span>
+          <span class="tag" data-fr="SES" data-en="Economics & Social Sciences"></span>
+          <span class="tag" data-fr="Anglais" data-en="English"></span>
+          <span class="tag" data-fr="Immersion entreprise" data-en="Company immersion"></span>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="section-title">
+          <h2 data-fr="Détails" data-en="Details"></h2>
+          <div class="line" aria-hidden="true"></div>
+        </div>
+
+        <div class="facts">
+          <div class="fact">
+            <div class="icon">📍</div>
+            <div>
+              <div class="label" data-fr="Adresse" data-en="Location"></div>
+              <div class="value" data-fr="Biot, France" data-en="Biot, France"></div>
+            </div>
+          </div>
+
+          <div class="fact">
+            <div class="icon">🎓</div>
+            <div>
+              <div class="label" data-fr="Niveau" data-en="Current level"></div>
+              <div class="value"
+                   data-fr="Terminale – Mathématiques, SES, option Mathématiques expertes"
+                   data-en="Final year – Mathematics, Economics & Social Sciences, Advanced Mathematics option"></div>
+            </div>
+          </div>
+
+          <div class="fact">
+            <div class="icon">🌍</div>
+            <div>
+              <div class="label" data-fr="Langues" data-en="Languages"></div>
+              <div class="value"
+                   data-fr="Français, anglais (bon niveau), espagnol (niveau B1)"
+                   data-en="French, English (good level), Spanish (B1)"></div>
+            </div>
+          </div>
+
+          <div class="fact">
+            <div class="icon">🎯</div>
+            <div>
+              <div class="label" data-fr="Qualités" data-en="Strengths"></div>
+              <div class="value"
+                   data-fr="Discipline, régularité, capacité d’engagement"
+                   data-en="Discipline, consistency, strong commitment"></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="card reveal">
+
+        <div class="block">
+          <div class="section-title">
+            <h2 data-fr="Profil" data-en="Profile"></h2>
+            <div class="line" aria-hidden="true"></div>
+          </div>
+
+          <p class="para"
+             data-fr="Mon parcours sportif, notamment plusieurs années de pratique intensive du tennis jusqu’en Première, m’a permis de développer discipline, régularité et capacité d’engagement. Je dispose également d’un bon niveau d’anglais, pratiqué quotidiennement dans un environnement international."
+             data-en="My sporting background, including several years of intensive tennis practice up to Première level, helped me develop discipline, consistency and commitment. I also have a solid level of English, used daily in an international environment."></p>
+        </div>
+
+        <div class="block">
+          <div class="section-title">
+            <h2 data-fr="Formation" data-en="Education"></h2>
+            <div class="line" aria-hidden="true"></div>
+          </div>
+
+          <article class="job reveal">
+            <div class="job-head">
+              <div class="job-title"
+                   data-fr="Terminale – Lycée français Académie Mouratoglou"
+                   data-en="Final year – Lycée français Académie Mouratoglou"></div>
+              <div class="job-meta"
+                   data-fr="2025 – 2026"
+                   data-en="2025 – 2026"></div>
+            </div>
+            <ul class="stagger">
+              <li data-fr="Mathématiques, Sciences Économiques et Sociales" data-en="Mathematics, Economics and Social Sciences"></li>
+              <li data-fr="Option Mathématiques expertes" data-en="Advanced Mathematics option"></li>
+              <li data-fr="Baccalauréat prévu en 2026" data-en="Baccalaureate expected in 2026"></li>
+            </ul>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-head">
+              <div class="job-title"
+                   data-fr="Lycée français – option sport-études Tennis, Académie Mouratoglou, Sophia-Antipolis"
+                   data-en="French high school – sports studies Tennis, Mouratoglou Academy, Sophia-Antipolis"></div>
+              <div class="job-meta"
+                   data-fr="2023 – 2025"
+                   data-en="2023 – 2025"></div>
+            </div>
+            <ul class="stagger">
+              <li data-fr="Parcours sport-études orienté tennis" data-en="Sports studies pathway focused on tennis"></li>
+              <li data-fr="Environnement exigeant, structuré et international" data-en="Demanding, structured and international environment"></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="block">
+          <div class="section-title">
+            <h2 data-fr="Projet" data-en="Project"></h2>
+            <div class="line" aria-hidden="true"></div>
+          </div>
+
+          <article class="job reveal">
+            <div class="job-head">
+              <div class="job-title"
+                   data-fr="Immersion en entreprise"
+                   data-en="Company immersion"></div>
+              <div class="job-meta"
+                   data-fr="2026 – 2027"
+                   data-en="2026 – 2027"></div>
+            </div>
+            <p class="para"
+               data-fr="Cette année d’immersion en entreprise me paraît essentielle afin d’aborder la suite de mon cursus d’enseignement supérieur avec une vision pragmatique et structurée du monde professionnel."
+               data-en="This immersion year in a company seems essential to approach the next stage of my higher education with a pragmatic and structured understanding of the professional world."></p>
+          </article>
+        </div>
+
+        <div class="block">
+          <div class="section-title">
+            <h2 data-fr="Centres d’intérêt" data-en="Interests"></h2>
+            <div class="line" aria-hidden="true"></div>
+          </div>
+
+          <article class="job reveal">
+            <ul class="stagger">
+              <li data-fr="Sports : tennis, ski de randonnée, ski freestyle, moto-cross" data-en="Sports: tennis, ski touring, freestyle skiing, motocross"></li>
+              <li data-fr="Actualité politique et économique" data-en="Political and economic current affairs"></li>
+              <li data-fr="Fort intérêt pour le monde de l’horlogerie de luxe" data-en="Strong interest in the world of luxury watchmaking"></li>
+            </ul>
+          </article>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script>
+    let lang = 'fr';
+
+    function applyLang(){
+      document.querySelectorAll('[data-fr]').forEach(el => {
+        el.textContent = el.dataset[lang];
+      });
+      document.getElementById('langBtn').textContent = lang.toUpperCase();
+      document.documentElement.lang = lang;
+    }
+
+    document.getElementById('langBtn').addEventListener('click', () => {
+      lang = (lang === 'fr') ? 'en' : 'fr';
+      applyLang();
+    });
+
+    const revealEls = Array.from(document.querySelectorAll('.reveal, .stagger'));
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          if(entry.target.classList.contains('stagger')) {
+            entry.target.classList.add('visible');
+          }
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => io.observe(el));
+
+    applyLang();
+  </script>
+</body>
+</html>
